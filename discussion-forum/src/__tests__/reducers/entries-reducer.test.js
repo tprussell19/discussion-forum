@@ -1,5 +1,5 @@
 import entriesReducer from "./../../reducers/entries-reducer.js";
-import { entries as defaultEntriesState } from './../../defaultEntries.json';
+import { entries as defaultEntriesStateArray } from './../../defaultEntries.json';
 
 describe('entriesReducer', () => {
   let action;
@@ -17,14 +17,30 @@ describe('entriesReducer', () => {
   });
 
   test('should return default state when passed default', () => {
-    expect(entriesReducer(defaultEntriesState, {})).toEqual(defaultEntriesState);
+    expect(entriesReducer(defaultEntriesStateArray, {})).toEqual(defaultEntriesStateArray);
   });
 
   test('should successfully add entry', () => {
     action = {
       type: "ADD_ENTRY", ...entry
     };
-    expect(entriesReducer(defaultEntriesState, action)).toEqual({...defaultEntriesState, ...entry})
+    expect(entriesReducer(defaultEntriesStateArray, action)).toEqual({...defaultEntriesStateArray, ...entry})
+  });
+
+  test('should update an entry successfully', () => {
+    // copy default entries
+    const entriesCopy =  [...defaultEntriesStateArray];
+    // remove the first element
+    const changedEntry = entriesCopy.shift();
+    // make a change
+    changedEntry.title = "test2"
+    // create the action
+    const action = {
+      type: "UPDATE_ENTRY",
+      ...changedEntry
+    }
+    // update entry
+    expect(entriesReducer(defaultEntriesStateArray, action)).toEqual([changedEntry, ...entriesCopy])
   })
 })
 
