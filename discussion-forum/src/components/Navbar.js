@@ -1,5 +1,6 @@
-
 import { GiConverseShoe } from 'react-icons/gi'
+import { CgGames } from 'react-icons/cg'
+
 function Navbar(props) {
   const navbarStyles = {
     display: 'flex',
@@ -10,8 +11,9 @@ function Navbar(props) {
     marginBottom: '22px',
     overflow: 'none'
   }
+
   const linkStyles = {
-    minWidth: '160px',
+    width: '12.5%',
     lineHeight: '90px',
     display: 'flex',
     flexDirection: 'row',
@@ -20,6 +22,7 @@ function Navbar(props) {
     paddingRight: '22px',
     fontWeight: '500',
   }
+
   const linkDivStyles = {
     paddingTop: '25px',
     lineHeight: '50px',
@@ -34,8 +37,64 @@ function Navbar(props) {
         <div style={linkDivStyles}><GiConverseShoe style={{ fontSize: '40px'}} /></div>
         <span>Home</span>
       </a>
+
+      <a type='submit'
+        onClick={event => props.navigateTo(event, 'board')}
+        style={linkStyles} href='/'
+      >
+        <div style={linkDivStyles}><GiConverseShoe style={{ fontSize: '40px'}} /></div>
+        <span>Board</span>
+      </a>
+
+      <a type='submit'
+        onClick={event => props.navigateTo(event, 'drinking')}
+        style={linkStyles} href='/'
+      >
+        <div style={linkDivStyles}><GiConverseShoe style={{ fontSize: '40px'}} /></div>
+        <span>Drinking</span>
+      </a>
+
+      <a type='submit'
+        onClick={event => props.navigateTo(event, 'lawn')}
+        style={linkStyles} href='/'
+      >
+        <div style={linkDivStyles}><GiConverseShoe style={{ fontSize: '40px'}} /></div>
+        <span>Lawn</span>
+      </a>
+
+      <a type='submit'
+        onClick={event => props.navigateTo(event, 'mobile')}
+        style={linkStyles} href='/'
+      >
+        <div style={linkDivStyles}><GiConverseShoe style={{ fontSize: '40px'}} /></div>
+        <span>Mobile</span>
+      </a>
+
+      <a type='submit'
+        onClick={event => props.navigateTo(event, 'sports')}
+        style={linkStyles} href='/'
+      >
+        <div style={linkDivStyles}><GiConverseShoe style={{ fontSize: '40px'}} /></div>
+        <span>Sports</span>
+      </a>
+
+      <a type='submit'
+        onClick={event => props.navigateTo(event, 'tabletop')}
+        style={linkStyles} href='/'
+      >
+        <div style={linkDivStyles}><GiConverseShoe style={{ fontSize: '40px'}} /></div>
+        <span>Tabletop</span>
+      </a>
+
+      <a type='submit'
+        onClick={event => props.navigateTo(event, 'video')}
+        style={linkStyles} href='/'
+      >
+        <div style={linkDivStyles}><CgGames style={{ fontSize: '40px'}} /></div>
+        <span>Video</span>
+      </a>
     </div>
   )
 }
+
 export default Navbar
-    

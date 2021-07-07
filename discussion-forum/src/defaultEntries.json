@@ -1,0 +1,49 @@
+{
+  "entries": [
+    {
+      "title": "Point God",
+      "board": "sports",
+      "body": "Chris Paul is the greatest PG ever",
+      "id": "ouhw-923ubf",
+      "votes": -45,
+      "comments": [
+        {
+          "user": "Bucks4Lyfe",
+          "comment": "Last night was luck. Bucks in 5!!!"
+        }
+      ]
+    },
+    {
+      "title": "Valheim - when patchy?",
+      "board": "video",
+      "body": "Hire more devs we want more content",
+      "id": "abcd-1234",
+      "votes": 22,
+      "comments": [
+        {
+          "user": "VikingBob",
+          "comment": "I agree!"
+        },
+        {
+          "user": "VikingAlice",
+          "comment": "You could not be more wrong!"
+        }
+      ]
+    },
+    {
+      "title": "Does it mix",
+      "board": "drinking",
+      "body": "Milk and whiskey do not mix well",
+      "id": "232",
+      "votes": -10,
+      "comments": [   {
+        "user": "bob",
+        "comment": "worst game created"
+      },
+      {
+        "user": "stacy",
+        "comment": "have the ibuprofen ready"
+      }]
+    }
+  ]
+}
