@@ -1,7 +1,7 @@
-import { entries as defaultEntriesState } from './../defaultEntries.json';
+import { entries as defaultEntriesState } from './../defaultState.json';
 
 const entriesReducer = (state = defaultEntriesState, action) => {
-  const { title, board, body, votes, comments, id } = action;
+  const { title, board, body, votes, id } = action;
   switch (action.type) {
     case 'ADD_ENTRY':
       return Object.assign({}, state, {
@@ -9,7 +9,6 @@ const entriesReducer = (state = defaultEntriesState, action) => {
         board: board,
         body: body,
         votes: votes,
-        comments: comments,
         id: id
       });
     case 'UPDATE_ENTRY':
@@ -21,7 +20,6 @@ const entriesReducer = (state = defaultEntriesState, action) => {
         board: board,
         body: body,
         votes: votes,
-        comments: comments,
         id: id
       }
       allEntriesExceptTheUpdatedOne.unshift(updatedEntry);

@@ -1,5 +1,5 @@
 import entriesReducer from "./../../reducers/entries-reducer.js";
-import { entries as defaultEntriesStateArray } from './../../defaultEntries.json';
+import { entries as defaultEntriesStateArray } from './../../defaultState.json';
 
 describe('entriesReducer', () => {
   let action, entry;
@@ -10,13 +10,12 @@ describe('entriesReducer', () => {
       board: "test1",
       body: "test1",
       id: "test1",
-      votes: 5,
-      comments: []
+      votes: 5
     }
   })
 
-  test('should return empty state when pass ed empty state', () => {
-    expect(entriesReducer({}, {})).toEqual({});
+  test('should return empty state when passed empty state', () => {
+    expect(entriesReducer([], {})).toEqual([]);
   });
 
   test('should return default state when passed default', () => {
