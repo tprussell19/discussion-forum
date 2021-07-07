@@ -1,12 +1,12 @@
 import { entries as defaultEntriesState } from './../defaultState.json';
 
 const entriesReducer = (state = defaultEntriesState, action) => {
-  const { title, board, body, votes, id } = action;
+  const { title, category, body, votes, id } = action;
   switch (action.type) {
     case 'ADD_ENTRY':
       return Object.assign({}, state, {
         title: title,
-        board: board,
+        category: category,
         body: body,
         votes: votes,
         id: id
@@ -17,7 +17,7 @@ const entriesReducer = (state = defaultEntriesState, action) => {
       // add the updated item and return
       const updatedEntry = {
         title: title,
-        board: board,
+        category: category,
         body: body,
         votes: votes,
         id: id

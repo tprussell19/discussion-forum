@@ -2,21 +2,21 @@
   "entries": [
     {
       "title": "Point God",
-      "board": "sports",
+      "category": "sports",
       "body": "Chris Paul is the greatest PG ever",
       "id": "ouhw-923ubf",
       "votes": -45
     },
     {
       "title": "Valheim - when patchy?",
-      "board": "video",
+      "category": "video",
       "body": "Hire more devs we want more content",
       "id": "abcd-1234",
       "votes": 22
     },
     {
       "title": "Does it mix",
-      "board": "drinking",
+      "category": "drinking",
       "body": "Milk and whiskey do not mix well",
       "id": "232",
       "votes": -10

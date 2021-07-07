@@ -40,7 +40,7 @@ function Navbar(props) {
 
       <a type='submit'
         onClick={event => props.navigateTo(event, 'board')}
-        style={linkStyles} href='/'
+        style={linkStyles} href='/board'
       >
         <div style={linkDivStyles}><GiConverseShoe style={{ fontSize: '40px'}} /></div>
         <span>Board</span>
@@ -48,7 +48,7 @@ function Navbar(props) {
 
       <a type='submit'
         onClick={event => props.navigateTo(event, 'drinking')}
-        style={linkStyles} href='/'
+        style={linkStyles} href='/drinking'
       >
         <div style={linkDivStyles}><GiConverseShoe style={{ fontSize: '40px'}} /></div>
         <span>Drinking</span>
@@ -56,7 +56,7 @@ function Navbar(props) {
 
       <a type='submit'
         onClick={event => props.navigateTo(event, 'lawn')}
-        style={linkStyles} href='/'
+        style={linkStyles} href='/lawn'
       >
         <div style={linkDivStyles}><GiConverseShoe style={{ fontSize: '40px'}} /></div>
         <span>Lawn</span>
@@ -64,7 +64,7 @@ function Navbar(props) {
 
       <a type='submit'
         onClick={event => props.navigateTo(event, 'mobile')}
-        style={linkStyles} href='/'
+        style={linkStyles} href='/mobile'
       >
         <div style={linkDivStyles}><GiConverseShoe style={{ fontSize: '40px'}} /></div>
         <span>Mobile</span>
@@ -72,7 +72,7 @@ function Navbar(props) {
 
       <a type='submit'
         onClick={event => props.navigateTo(event, 'sports')}
-        style={linkStyles} href='/'
+        style={linkStyles} href='/sports'
       >
         <div style={linkDivStyles}><GiConverseShoe style={{ fontSize: '40px'}} /></div>
         <span>Sports</span>
@@ -80,7 +80,7 @@ function Navbar(props) {
 
       <a type='submit'
         onClick={event => props.navigateTo(event, 'tabletop')}
-        style={linkStyles} href='/'
+        style={linkStyles} href='/tabletop'
       >
         <div style={linkDivStyles}><GiConverseShoe style={{ fontSize: '40px'}} /></div>
         <span>Tabletop</span>
@@ -88,7 +88,7 @@ function Navbar(props) {
 
       <a type='submit'
         onClick={event => props.navigateTo(event, 'video')}
-        style={linkStyles} href='/'
+        style={linkStyles} href='/video'
       >
         <div style={linkDivStyles}><CgGames style={{ fontSize: '40px'}} /></div>
         <span>Video</span>

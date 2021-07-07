@@ -7,7 +7,7 @@ describe('entriesReducer', () => {
   beforeEach(() => {
     entry = {
       title: "test1",
-      board: "test1",
+      category: "test1",
       body: "test1",
       id: "test1",
       votes: 5
