@@ -26,6 +26,8 @@ const entriesReducer = (state = defaultEntriesState, action) => {
       }
       allEntriesExceptTheUpdatedOne.unshift(updatedEntry);
       return allEntriesExceptTheUpdatedOne;
+    case 'DELETE_ENTRY':
+      return state.filter(element => element.id !== action.id)
     default:
       return state;
   }

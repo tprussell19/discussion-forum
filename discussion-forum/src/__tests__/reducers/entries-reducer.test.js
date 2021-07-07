@@ -2,15 +2,18 @@ import entriesReducer from "./../../reducers/entries-reducer.js";
 import { entries as defaultEntriesStateArray } from './../../defaultEntries.json';
 
 describe('entriesReducer', () => {
-  let action;
-  const entry = {
-    title: "test1",
-    board: "test1",
-    body: "test1",
-    id: "test1",
-    votes: 5,
-    comments: []
-  }
+  let action, entry;
+
+  beforeEach(() => {
+    entry = {
+      title: "test1",
+      board: "test1",
+      body: "test1",
+      id: "test1",
+      votes: 5,
+      comments: []
+    }
+  })
 
   test('should return empty state when pass ed empty state', () => {
     expect(entriesReducer({}, {})).toEqual({});
@@ -42,5 +45,14 @@ describe('entriesReducer', () => {
     // update entry
     expect(entriesReducer(defaultEntriesStateArray, action)).toEqual([changedEntry, ...entriesCopy])
   })
+
+    test('should successfully delete entry', () => {
+      const oneToDelete = defaultEntriesStateArray[0]
+      action = {
+        type: "DELETE_ENTRY", ...oneToDelete
+      }
+      const result = defaultEntriesStateArray.filter(element => element.id !== oneToDelete.id)
+      expect(entriesReducer(defaultEntriesStateArray, action)).toEqual(result)
+    })
 })
 
