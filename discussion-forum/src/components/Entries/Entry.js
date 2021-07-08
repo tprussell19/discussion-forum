@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 function Entry(props) {
   return (
-    <div class='single-entry-container'>
+    <div className='single-entry-container'>
       <span>{props.votes}</span>
       <h3>{props.title}</h3>
       <p>{props.body}</p>

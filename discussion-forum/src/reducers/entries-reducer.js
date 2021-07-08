@@ -4,13 +4,13 @@ const entriesReducer = (state = defaultEntriesState, action) => {
   const { title, category, body, votes, id } = action;
   switch (action.type) {
     case 'ADD_ENTRY':
-      return Object.assign({}, state, {
+      return [...state, {
         title: title,
         category: category,
         body: body,
         votes: votes,
         id: id
-      });
+      }];
     case 'UPDATE_ENTRY':
       // filter and copy all but the updated item
       const allEntriesExceptTheUpdatedOne = state.filter(item => item.id !== id)

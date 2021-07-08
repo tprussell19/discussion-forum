@@ -26,7 +26,7 @@ describe('entriesReducer', () => {
     action = {
       type: "ADD_ENTRY", ...entry
     };
-    expect(entriesReducer(defaultEntriesStateArray, action)).toEqual({...defaultEntriesStateArray, ...entry})
+    expect(entriesReducer(defaultEntriesStateArray, action)).toEqual(expect.arrayContaining([...defaultEntriesStateArray, entry]))
   });
 
   test('should update an entry successfully', () => {

@@ -10,7 +10,7 @@ function Board(props) {
     <div className='container'>
       <Header title='Board' />
       <div className='flex flex-row new-entry-container'>
-        <ReusableEntryForm />
+        <ReusableEntryForm formSubmissionHandler={props.addOrEditEntry} category="board" />
       </div>
       <EntryList category="Board" entries={props.entries} />
     </div>
@@ -18,7 +18,8 @@ function Board(props) {
 }
 
 Board.propTypes = {
-  entries: PropTypes.array
+  entries: PropTypes.array,
+  addOrEditEntry: PropTypes.func.isRequired
 }
 
 export default Board;
