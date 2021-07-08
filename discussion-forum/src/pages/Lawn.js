@@ -1,11 +1,20 @@
-import Header from './../components/Header'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-function Lawn() {
+import Header from './../components/Header';
+import EntryList from './../components/Entries/EntryList';
+
+function Lawn(props) {
   return(
-    <div style={{ minHeight: '100vh' }}>
-    <Header title='Lawn' />
+    <div className='container'>
+      <Header title='Lawn' />
+      <EntryList category="Lawn" entries={props.entries} />
     </div>
   )
 }
 
-export default Lawn
+Lawn.propTypes = {
+  entries: PropTypes.array
+}
+
+export default Lawn;

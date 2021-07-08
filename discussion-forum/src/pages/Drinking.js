@@ -6,9 +6,9 @@ import EntryList from './../components/Entries/EntryList';
 
 function Drinking(props) {
   return(
-    <div style={{ minHeight: '50vh' }}>
+    <div className='container'>
       <Header title='Drinking' />
-      <EntryList category="Drinking" entries={props} />
+      <EntryList category="Drinking" entries={props.entries} />
     </div>
   )
 }

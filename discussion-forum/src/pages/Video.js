@@ -1,11 +1,20 @@
-import Header from './../components/Header'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-function Video() {
+import Header from './../components/Header';
+import EntryList from './../components/Entries/EntryList';
+
+function Video(props) {
   return(
-    <div style={{ minHeight: '50vh' }}>
+    <div className='container'>
     <Header title='Video' />
+    <EntryList category="Video" entries={props.entries} />
     </div>
   )
 }
 
-export default Video
+Video.propTypes = {
+  entries: PropTypes.array
+}
+
+export default Video;

@@ -1,5 +1,8 @@
-import { GiConverseShoe } from 'react-icons/gi'
+import { GiConverseShoe, GiDart, GiBeerStein } from 'react-icons/gi'
+import { FaDiceD20, FaChessKnight } from 'react-icons/fa'
+import { ImMobile } from 'react-icons/im'
 import { CgGames } from 'react-icons/cg'
+import { AiOutlineHome } from 'react-icons/ai'
 
 function Navbar(props) {
   const navbarStyles = {
@@ -34,7 +37,7 @@ function Navbar(props) {
         onClick={event => props.navigateTo(event, 'home')}
         style={linkStyles} href='/'
       >
-        <div style={linkDivStyles}><GiConverseShoe style={{ fontSize: '40px'}} /></div>
+        <div style={linkDivStyles}><AiOutlineHome style={{ fontSize: '40px'}} /></div>
         <span>Home</span>
       </a>
 
@@ -42,7 +45,7 @@ function Navbar(props) {
         onClick={event => props.navigateTo(event, 'board')}
         style={linkStyles} href='/board'
       >
-        <div style={linkDivStyles}><GiConverseShoe style={{ fontSize: '40px'}} /></div>
+        <div style={linkDivStyles}><FaChessKnight style={{ fontSize: '40px'}} /></div>
         <span>Board</span>
       </a>
 
@@ -50,7 +53,7 @@ function Navbar(props) {
         onClick={event => props.navigateTo(event, 'drinking')}
         style={linkStyles} href='/drinking'
       >
-        <div style={linkDivStyles}><GiConverseShoe style={{ fontSize: '40px'}} /></div>
+        <div style={linkDivStyles}><GiBeerStein style={{ fontSize: '40px'}} /></div>
         <span>Drinking</span>
       </a>
 
@@ -58,7 +61,7 @@ function Navbar(props) {
         onClick={event => props.navigateTo(event, 'lawn')}
         style={linkStyles} href='/lawn'
       >
-        <div style={linkDivStyles}><GiConverseShoe style={{ fontSize: '40px'}} /></div>
+        <div style={linkDivStyles}><GiDart style={{ fontSize: '40px'}} /></div>
         <span>Lawn</span>
       </a>
 
@@ -66,7 +69,7 @@ function Navbar(props) {
         onClick={event => props.navigateTo(event, 'mobile')}
         style={linkStyles} href='/mobile'
       >
-        <div style={linkDivStyles}><GiConverseShoe style={{ fontSize: '40px'}} /></div>
+        <div style={linkDivStyles}><ImMobile style={{ fontSize: '40px'}} /></div>
         <span>Mobile</span>
       </a>
 
@@ -82,7 +85,7 @@ function Navbar(props) {
         onClick={event => props.navigateTo(event, 'tabletop')}
         style={linkStyles} href='/tabletop'
       >
-        <div style={linkDivStyles}><GiConverseShoe style={{ fontSize: '40px'}} /></div>
+        <div style={linkDivStyles}><FaDiceD20 style={{ fontSize: '40px'}} /></div>
         <span>Tabletop</span>
       </a>
 

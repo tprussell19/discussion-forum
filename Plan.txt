@@ -1,0 +1,24 @@
+Discussion Board
+
+Board
+  Submissions/posts/entries
+    votes
+    comments
+
+state/reducers
+  navigation
+  votes
+  comments
+  submissions/posts
+  users/auth
+
+Games
+  video
+  Board
+  tabletop
+  drinking
+  mobile
+  lawn
+  sports/team
+
+

@@ -37,13 +37,13 @@ class App extends Component {
     return (
       <div style={{ minHeight: '100vh' }}>
         <Navbar navigateTo={this.navigateTo} />
-        { this.state.currentPage === 'board' ? <Board /> : null }
-        { this.state.currentPage === 'drinking' ? <Drinking /> : null }
-        { this.state.currentPage === 'lawn' ? <Lawn /> : null }
-        { this.state.currentPage === 'mobile' ? <Mobile /> : null }
-        { this.state.currentPage === 'sports' ? <Sports /> : null }
-        { this.state.currentPage === 'tabletop' ? <Tabletop /> : null }
-        { this.state.currentPage === 'video' ? <Video /> : null }
+        { this.state.currentPage === 'board' ? <Board entries={this.props.entries.filter(e => e.category === 'board')} /> : null }
+        { this.state.currentPage === 'drinking' ? <Drinking entries={this.props.entries.filter(e => e.category === 'drinking')} /> : null }
+        { this.state.currentPage === 'lawn' ? <Lawn entries={this.props.entries.filter(e => e.category === 'lawn')} /> : null }
+        { this.state.currentPage === 'mobile' ? <Mobile entries={this.props.entries.filter(e => e.category === 'mobile')} /> : null }
+        { this.state.currentPage === 'sports' ? <Sports entries={this.props.entries.filter(e => e.category === 'sports')} /> : null }
+        { this.state.currentPage === 'tabletop' ? <Tabletop entries={this.props.entries.filter(e => e.category === 'tabletop')} /> : null }
+        { this.state.currentPage === 'video' ? <Video entries={this.props.entries.filter(e => e.category === 'video')} /> : null }
         { ['board','drinking','lawn','mobile','sports','tabletop','video'].includes(this.state.currentPage) ? null : <Home /> }
         <Footer />
       </div>

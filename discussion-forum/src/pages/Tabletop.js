@@ -1,11 +1,20 @@
-import Header from './../components/Header'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-function Tabletop() {
+import Header from './../components/Header';
+import EntryList from './../components/Entries/EntryList';
+
+function Tabletop(props) {
   return(
-    <div style={{ minHeight: '50vh' }}>
-    <Header title='Tabletop' />
+    <div className='container'>
+      <Header title='Tabletop' />
+      <EntryList category="Tabletop" entries={props.entries} />
     </div>
   )
 }
 
-export default Tabletop
+Tabletop.propTypes = {
+  entries: PropTypes.array
+}
+
+export default Tabletop;

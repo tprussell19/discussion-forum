@@ -1,11 +1,24 @@
-import Header from './../components/Header'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-function Board() {
+import Header from './../components/Header';
+import EntryList from './../components/Entries/EntryList';
+import ReusableEntryForm from './../components/Entries/ReusableEntryForm';
+
+function Board(props) {
   return(
-    <div style={{ minHeight: '50vh' }}>
-    <Header title='Board' />
+    <div className='container'>
+      <Header title='Board' />
+      <div className='flex flex-row new-entry-container'>
+        <ReusableEntryForm />
+      </div>
+      <EntryList category="Board" entries={props.entries} />
     </div>
   )
 }
 
-export default Board
+Board.propTypes = {
+  entries: PropTypes.array
+}
+
+export default Board;

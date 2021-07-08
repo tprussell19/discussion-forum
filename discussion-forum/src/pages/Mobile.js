@@ -1,11 +1,20 @@
-import Header from './../components/Header'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-function Mobile() {
+import Header from './../components/Header';
+import EntryList from './../components/Entries/EntryList';
+
+function Mobile(props) {
   return(
-    <div style={{ minHeight: '50vh' }}>
+    <div className='container'>
     <Header title='Mobile' />
+    <EntryList category="Mobile" entries={props.entries} />
     </div>
   )
 }
 
-export default Mobile
+Mobile.propTypes = {
+  entries: PropTypes.array
+}
+
+export default Mobile;
